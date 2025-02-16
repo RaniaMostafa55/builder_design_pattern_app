@@ -4,13 +4,25 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project applies builder design pattern as following
 
-A few resources to get you started if this is your first Flutter project:
+A class called "User" was created with some parameters:
+  - firstName (required)
+  - lastName (required)
+  - age (not required)
+  - phone (not required)
+    
+and a private named constructor to prevent creating objects easily
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Another class called "UserBuilder" with some functions to set data to the fields defined in "User" class
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A "build" function was added to this class to return an object from "User" class with the required data
+
+In the main function, and object of type "UserBuilder" was created to set data only to these fields:
+- firstName
+- lastName
+- age
+
+This object was used also to call the build function then print the returned object's data.
+
+Note that only firstName and lastName are required but the phone and age are not, so we can set data to them or not.
